@@ -1,0 +1,77 @@
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(7, 50px);
+    grid-template-rows: repeat(7, 50px);
+    gap: 2px;
+    /* Adjust this value as needed to ensure borders don't overlap */
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    /* Default background color for visibility */
+    box-sizing: border-box;
+    /* Include padding and borders in the element's total width and height */
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+.selected {
+    border: 4px solid yellow;
+    /* Default border color for the first drag */
+    /* background-color: rgba(255, 255, 0, 0.3); */
+    /* Light yellow overlay */
+}
+
+.white-border {
+    border: 4px solid white;
+    /* background-color: rgba(255, 255, 255, 0.3); */
+}
+
+.orange-border {
+    border: 4px solid orange;
+    /* background-color: rgba(255, 165, 0, 0.3); */
+}
+
+/* .cell.selected::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border: 4px solid white;
+    box-sizing: border-box;
+    pointer-events: none;
+} */
+/*
+.cell.selected::after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border: 4px solid orange;
+    box-sizing: border-box;
+    pointer-events: none;
+} */
+
+
+#cancel-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
