@@ -1,9 +1,18 @@
+#game-container {
+    position: relative;
+    width: max-content;
+    margin: 0 0;
+    /* Center the game container */
+    padding-bottom: 50px;
+    /* Space for controls */
+}
+
 #game-board {
     display: grid;
-    grid-template-columns: repeat(7, 50px);
-    grid-template-rows: repeat(7, 50px);
+    grid-template-columns: repeat(var(--grid-size), 50px);
+    grid-template-rows: repeat(var(--grid-size), 50px);
     gap: 2px;
-    /* Adjust this value as needed to ensure borders don't overlap */
+    padding-bottom: 20px;
 }
 
 .cell {
@@ -68,10 +77,23 @@
     pointer-events: none;
 } */
 
+#controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
 
 #cancel-button {
-    margin-top: 20px;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+}
+
+#score-display {
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #333;
 }
